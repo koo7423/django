@@ -1,0 +1,47 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand" ><a href="\">MyPet</a></h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="\">Home</a>
+        <a class="nav-link" href="#">먹이</a>
+        <a class="nav-link" href="#">장난감</a>
+      </nav>
+    </div>
+      {{error}}
+  </header>
+  <form metgod = "POST" action = ".">
+      {% csrf_token %}
+  <main role="main" class="inner cover">
+      <form class="form-signup">
+      <div class="form-group">
+      <h1 class="h3 mb-3 font-weight-normal">회원가입</h1>
+          <label for="username" class="sr-only">아이디</label>
+          <input type="username" id="username" class="form-control" placeholder="아이디" required autofocus>
+              <p></p>
+          <label for="Password" class="sr-only">비밀번호</label>
+          <input type="password" id="Password" class="form-control" placeholder="비밀번호" required>
+              <p></p>
+          <label for="Password2" class="sr-only">비밀번호 확인</label>
+          <input type="password" id="Password2" class="form-control" placeholder="비밀번호 확인" required>
+              <p></p>
+          <input type="submit" class="btn btn-lg btn-secondary" value="회원가입">
+      </div>
+      </form>
+  </main>
+  </form>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Mypet HomePage <a href="/">MyPet</a>
+    </div>
+  </footer>
+</div>
+</body>
